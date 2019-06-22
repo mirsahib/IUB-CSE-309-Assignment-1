@@ -22,3 +22,20 @@ $(document).ready(function(){
   // 6. Implement quantity update for each cart item and update total cost dynamically.
   // 7. Store and load cart from localStorage
 });
+
+$(".my-rating").starRating({
+  totalStars: 5,
+  emptyColor: 'lightgray',
+  hoverColor: 'crimson',
+  activeColor: 'orange',
+  initialRating: 4,
+  strokeWidth: 0,
+  useGradient: false,
+  minRating: 1,
+  callback: function(currentRating, $el){
+      alert('rated '+ currentRating);
+      console.log('DOM element ', $el);
+  }
+});
+
+
