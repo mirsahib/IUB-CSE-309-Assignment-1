@@ -1,89 +1,179 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RottenPumkin</title>
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--Main Navigation-->
-    <header>
-        <nav style="background:#f06624" class="navbar">
-            <div class="container">
-                <h1 style="color:white">Rotten Pumkin</h1>
-            </div>
-        </nav>
-                  
-        <div style="background:#f06624 !important" class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <!--<h1 class="display-4 text-white">Rotten Pumkin</h1>-->
-                <div class="row">
-                    <div class="col-sm-4">
-                            <img width="300px" src="image/pumkin.png">
-                            <h3 class="lead text-white">We eat movies for breakfast</p>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-outline-light">Sign in</a>
-                                <span style="margin: 0 12px" class="text-white">or</span>
-                                <a href="#" class="btn btn-default text-white">Sign up</a>
-                            </div>
-                    </div>
-                    <div style="background:white;height:10px ;" class="col-sm-8"></div>
-                </div>
-            </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rotten Pumkin</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="showcase-top">
+        <h1 style="font-size: 42px;color:red">Rotten Pumkin</h1>
+      </div>
+      <div class="showcase-content">
+        <h1>We eat movie for breakfast</h1>
+        <p>Rate movie and watch trailer. Get Recommendation</p>
+        <!--<a href="#" style="display: inline-block;" class="btn btn-xl">Sign in<i class="fas fa-chevron-right btn-icon"></i></a>
+    -->
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <a href="#" style="display: inline-block;" class="btn btn-xl"
+              >Sign in<i class="fas fa-chevron-right btn-icon"></i
+            ></a>
+            <a href="register.html" style="display: inline-block;" class="btn btn-xl"
+              >Sign up<i class="fas fa-chevron-right btn-icon"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </header>
-    <!--Main layout-->
-    <main>
-        <div class="container">
-            <!--Section: description Features-->
-            <section id="Description">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 style="color:orange">Recommendation</h4>
-                        <p>Rotten Pumkin helps you find movies you will like.
-                            Rate movies to build a custom taste profile, 
-                            then RottenPumkin recommends other movies for you to watch.
-                        </p>
-                    </div>
-                    <div class="col-sm-8">
-                        <img width="500px" src="image/main-screen.png" class="img-responsive marketing-img">
-                    </div>
-                </div>
-            </section>
-            <!--Section: Best Features-->
-    
-            <hr class="my-5">
-    
-            <!--Section: Examples-->
-            <section id="examples">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 style="color:orange">More Ninja</h4>
-                        <p>Find movies that are similar to the ones you like.
-                            Tune the matching algorithm so that the results are "less violent",
-                            "more realistic", or "more ninja".
-                        </p>
-                    </div>
-                    <div class="col-sm-8">
-                        <img width="500px" src="image/main-screen.png" class="img-responsive marketing-img">
-                    </div>
-                </div>
-            </section>
-            <!--Section: Examples-->    
-        </div>            
-    </main>
-    <!--footer-->
-    <footer style="background:#f06624" >
-        <div  class="mt-1 pt-3 pb-3 container-fluid text-center">
-            <a href="#">About Rotten Pumkin  |</a>
-            <a  class="ml-1" href="#">Contact  |</a>
-            <a  class="ml-1"href="#">Term</a>
-            <p style="color:white">All content copyright <a href="#">Vadaima Inc</a> © 2019 • All rights reserved.</p>
+    <section class="tab-content">
+      <div class="container">
+        <!-- Tab Content 1 -->
+        <h2>Opening this week</h2>
+        <hr class="my-4" />
+        <div class="row" id="productRow">
+          <!-- Sample product card -->
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tardis Figurine</h5>
+                <p class="card-text">
+                  <img
+                    style="width: 20px;"
+                    src="https://img.icons8.com/color/48/000000/tomato.png"/>
+                  50%
+                </p>
+                <button class="btn btn-primary">Watch Trailer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tardis Figurine</h5>
+                <p class="card-text">
+                  <img
+                    style="width: 20px;"
+                    src="https://img.icons8.com/color/48/000000/rotten-tomatoes.png"
+                  />
+                  30%
+                </p>
+                <button class="btn btn-primary">Watch trailer</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tardis Figurine</h5>
+                <p class="card-text">65%</p>
+                <button class="btn btn-primary">Watch trailer</button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Tab Content 2 -->
+        <h2>Top Movies</h2>
+        <hr class="my-4" />
+        <div class="row" id="productRow">
+            <!-- Sample product card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                        alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">Tardis Figurine</h5>
+                        <p class="card-text">
+                            <img style="width: 20px;" src="https://img.icons8.com/color/48/000000/tomato.png" />
+                            50%
+                        </p>
+                        <button class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                        alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">Tardis Figurine</h5>
+                        <p class="card-text">
+                            <img style="width: 20px;" src="https://img.icons8.com/color/48/000000/rotten-tomatoes.png" />
+                            30%
+                        </p>
+                        <button class="btn btn-primary">Watch trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://s3.amazonaws.com/mernbook/marketplace/tardis.png"
+                        alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">Tardis Figurine</h5>
+                        <p class="card-text">65%</p>
+                        <button class="btn btn-primary">Watch trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Content 3 -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Questions? Call 1-866-579-7172</p>
+      <div class="footer-cols">
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Ways To Watch</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Netflix Originals</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Redeem Gift Cards</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Media Center</a></li>
+          <li><a href="#">Buy Gift Cards</a></li>
+          <li><a href="#">Cookie Preferences</a></li>
+          <li><a href="#">Legal Notices</a></li>
+        </ul>
+      </div>
     </footer>
-    
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
