@@ -8,8 +8,9 @@ Movie Recomendation site
 #### Task 3: dynamically show movie data
   The Popular movie section is dynamically populate by fetching the localstorage data
 #### Task 4: Show movie detail
-  Movie Detail can found by clicking the details button,br.
+  Movie Detail can found by clicking the details button,<br>.
   The `$(.cartbtn).click()` function will get the movie id and pass this to detail.html file <br>
+  The following code is use to pass movie id from index.html to detail.html
   `var queryString = "?para1=" + item['id'];
    window.location.href = "details.html"+ queryString`
 
