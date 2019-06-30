@@ -1,18 +1,70 @@
-var products = [
-  {name: "Wonder Woman Figurine", price: "12", image: "https://s3.amazonaws.com/mernbook/marketplace/wonder-woman-2977918_960_720.jpg"},
-  {name: "Darth Vader Figurine", price: "19", image: "https://s3.amazonaws.com/mernbook/marketplace/star-wars-2463926_960_720.png"},
-  {name: "Joker Figurine", price: "51", image: "https://s3.amazonaws.com/mernbook/marketplace/joker-1225051_960_720.jpg"},
-  {name: "Tardis Figurine", price: "14", image: "https://s3.amazonaws.com/mernbook/marketplace/tardis.png"},
-  {name: "Old Ford Car Model", price: "46", image: "https://s3.amazonaws.com/mernbook/marketplace/Ford.jpg"},
-  {name: "Storm Trooper Figurine", price: "23", image: "https://s3.amazonaws.com/mernbook/marketplace/stormtrooper-1995015_960_720.jpg"}
-];
-var cart = {
-  items: [],
-  total: 0
-};
+
 
 $(document).ready(function(){
   console.log("Start here");
+  //store movie data to localstorage
+  var len = Object.keys(localStorage).length
+  if(len==0){ //if localstorage is empty fetch data
+    const url =
+      "https://api.themoviedb.org/3/movie/now_playing?api_key=c438d70b1fcbf9e8f9852482df70fa5f&language=en-US&page=1";
+    fetch(url)
+      .then((result) => {
+        return result.json();
+      })
+      .then((data) => {
+        var id
+        for (var i = 0; i < data['results'].length; i++) {
+          id = data['results'][i]['id']
+          localStorage.setItem(id, JSON.stringify(data['results'][i]))
+        }
+      })
+      .catch(function (err) {
+        alert(err);
+      });
+  }
+  //dynamically show movie data
+  var key = Object.keys(localStorage)
+  for(var i =0;i<key.length;i++){
+    var item = JSON.parse(localStorage.getItem(key[i]))
+    var title = item['title']
+    var imageurl = 'http://image.tmdb.org/t/p/w342/'+item['poster_path']
+    var id = item['id']
+
+    var divCol = $('<div style="margin-bottom:8px" class="col-md-4">')
+    var divCard = $('<div class="card">')
+    var image = $('<img class="card-img-top" src="' + imageurl + '" />')
+    var cardBody = $('<div class="card-body">')
+    var cardTitle = $('<h5 class="card-title">' + title + '</h5>')
+    var cartBtn = $('<button id="'+id+'" class="btn btn-primary cardbtn" href="#" >Details</button>')
+    divCard.append(image)
+    cardBody.append(cardTitle)
+    cardBody.append(cartBtn)
+    divCard.append(cardBody)
+    divCol.append(divCard)
+    $('#popularMovie').append(divCol)
+  }  
+
+  $('.cardbtn').click(function (event) {
+    var item = JSON.parse(localStorage.getItem(event.target.id))
+    var queryString = "?para1=" + item['id'];
+    window.location.href = "details.html"+ queryString
+    
+    // var imgUrl = 'http://image.tmdb.org/t/p/w342/' + item['poster_path']
+    // var title = item['title']
+    // var overview = item['overview']
+    // var col1 = $('<div class="col-4">')
+    // var img = $('<img src="' + imgUrl + '" />')
+    // var col2 = $('<div style="padding-left:20px" class="col-8">')
+    // var mainTitle = $('<h1 >' + title + '</h1>')
+    // var para = $('<p>'+overview+'</p>')
+
+    // col1.append(img)
+    // col2.append(mainTitle)
+    // col2.append(para)
+    // $('#detail').append(col1)
+    // $('#detail').append(col2)
+  })
+   
   // Basic tasks
   // 1. Show / hide cart section on button click (Cart button / close cutton)
   // 2. Dynamically load products to view
@@ -23,19 +75,23 @@ $(document).ready(function(){
   // 7. Store and load cart from localStorage
 });
 
-$(".my-rating").starRating({
-  totalStars: 5,
-  emptyColor: 'lightgray',
-  hoverColor: 'crimson',
-  activeColor: 'orange',
-  initialRating: 4,
-  strokeWidth: 0,
-  useGradient: false,
-  minRating: 1,
-  callback: function(currentRating, $el){
-      alert('rated '+ currentRating);
-      console.log('DOM element ', $el);
-  }
-});
+
+
+// $(".my-rating").starRating({
+//   totalStars: 5,
+//   emptyColor: 'lightgray',
+//   hoverColor: 'crimson',
+//   activeColor: 'orange',
+//   initialRating: 4,
+//   strokeWidth: 0,
+//   useGradient: false,
+//   minRating: 1,
+//   callback: function(currentRating, $el){
+//       alert('rated '+ currentRating);
+//       console.log('DOM element ', $el);
+//   }
+// });
+
+
 
 
