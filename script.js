@@ -49,30 +49,9 @@ $(document).ready(function(){
     var queryString = "?para1=" + item['id'];
     window.location.href = "details.html"+ queryString
     
-    // var imgUrl = 'http://image.tmdb.org/t/p/w342/' + item['poster_path']
-    // var title = item['title']
-    // var overview = item['overview']
-    // var col1 = $('<div class="col-4">')
-    // var img = $('<img src="' + imgUrl + '" />')
-    // var col2 = $('<div style="padding-left:20px" class="col-8">')
-    // var mainTitle = $('<h1 >' + title + '</h1>')
-    // var para = $('<p>'+overview+'</p>')
-
-    // col1.append(img)
-    // col2.append(mainTitle)
-    // col2.append(para)
-    // $('#detail').append(col1)
-    // $('#detail').append(col2)
+    
   })
    
-  // Basic tasks
-  // 1. Show / hide cart section on button click (Cart button / close cutton)
-  // 2. Dynamically load products to view
-  // 3. Dynamically show total items in Cart
-  // 4. Add to cart button functionality
-  // 5. Dynamically load cart items
-  // 6. Implement quantity update for each cart item and update total cost dynamically.
-  // 7. Store and load cart from localStorage
 });
 
 
