@@ -14,6 +14,7 @@ Movie Recomendation site
   `var queryString = "?para1=" + item['id'];
    window.location.href = "details.html"+ queryString`
 
+#### NB: clear local storage before running index.html
 
 ## Landing Page
 ![alt text](https://github.com/mirsahib/RottenPumkin/blob/Assignment1/screenshot/landingPanel.png "Landing page")
