@@ -223,6 +223,12 @@ img {
 .text-dark {
   color: #999;
 }
+.center {
+  display: block;
+  margin-top: 100px;
+  width: 50%;
+}
+
 
 /* Buttons */
 .btn {
@@ -275,9 +281,9 @@ img {
   }
 
   .showcase-top img {
-    top: 30%;
     left: 5%;
-    transform: translate(0);
+    top:-60%;
+    transform: translate(95px);
   }
 
   .showcase-content h1 {
@@ -359,3 +365,5 @@ img {
     margin-top: 3rem;
   }
 }
+
+
