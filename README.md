@@ -17,7 +17,7 @@ Movie Recomendation site
 #### NB: clear local storage before running index.html
 
 ## Landing Page
-![alt text](https://github.com/mirsahib/RottenPumkin/blob/Assignment1/screenshot/landingPanel.png "Landing page")
+![alt text](https://github.com/mirsahib/RottenPumpkin/blob/master/screenshot/landing.png "Landing page")
 
 ## Popular Movie
 ![alt text](https://github.com/mirsahib/RottenPumkin/blob/Assignment1/screenshot/popularMovie.png "Popular page")
