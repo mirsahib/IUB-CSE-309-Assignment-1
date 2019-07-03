@@ -1,4 +1,4 @@
-# Rotten Pumkin
+# Rotten Pumpkin
 Movie Recomendation site
 #### Task 1: HTML and css (design)
   the site is build using bootstrap
